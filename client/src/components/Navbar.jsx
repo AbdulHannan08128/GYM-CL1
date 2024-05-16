@@ -132,7 +132,7 @@ const Navbar = ({ currentUser }) => {
   const [isOpen, setisOpen] = useState(false);
   return (
     <Nav>
-      <NavContainer>
+      <NavContainer className="h-80">
         <Mobileicon onClick={() => setisOpen(!isOpen)}>
           <MenuRounded sx={{ color: "inherit" }} />
         </Mobileicon>
@@ -144,7 +144,7 @@ const Navbar = ({ currentUser }) => {
         <MobileMenu isOpen={isOpen}>
           <Navlink to="/">Dashboard</Navlink>
           <Navlink to="/workouts">Workouts</Navlink>
-          <Navlink to="/tutorials">Tutorials</Navlink>
+          <Navlink to="/about">About</Navlink>
           <Navlink to="/blogs">Blogs</Navlink>
           <Navlink to="/contact">Contact</Navlink>
         </MobileMenu>
@@ -152,7 +152,7 @@ const Navbar = ({ currentUser }) => {
         <NavItems>
           <Navlink to="/">Dashboard</Navlink>
           <Navlink to="/workouts">Workouts</Navlink>
-          <Navlink to="/tutorials">Tutorials</Navlink>
+          <Navlink to="/about">About</Navlink>
           <Navlink to="/blogs">Blogs</Navlink>
           <Navlink to="/contact">Contact</Navlink>
         </NavItems>

@@ -2,12 +2,15 @@ import { ThemeProvider, styled } from "styled-components";
 import { lightTheme } from "./utils/Themes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Authentication from "./pages/Authentication";
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Workouts from "./pages/Workouts";
+import Blogs from "./pages/Blogs";
 import Profile from "./pages/Profile";
+import About from './pages/About'
+import Contact from './pages/Contact'
+import './index.css'
 
 const Container = styled.div`
   width: 100%;
@@ -33,6 +36,9 @@ function App() {
               <Route path="/" exact element={<Dashboard />} />
               <Route path="/workouts" exact element={<Workouts />} />
               <Route path="/profile" exact element={<Profile />} />
+              <Route path="/blogs" exact element={<Blogs />} />
+              <Route path="/about" exact element={<About />} />
+              <Route path="/contact" exact element={<Contact />} />
             </Routes>
           </Container>
         ) : (

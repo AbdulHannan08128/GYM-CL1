@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Avatar, Button, Container, Grid, TextField, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles((theme) => ({
- 
-}));
+
+
 
 const ProfilePage = ({ user }) => {
-  const classes = useStyles();
+  
   const [password, setPassword] = useState('');
 
   const handleChangePassword = () => {
@@ -20,17 +18,21 @@ const ProfilePage = ({ user }) => {
   };
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="sm" className='mt-20'>
       <Grid container spacing={2} justifyContent="center" alignItems="center" textAlign="center">
-        profile
-        <Grid item xs={12}>
-          <Avatar alt={user?.name} src={user?.img} className={classes.avatar} />
+      <div className=' grid grid-cols-2'>
+        <Grid  className='place-items-center'>
+          <Avatar alt={user?.name} src={user?.img} className='min-h-20 min-w-20'/>
         </Grid>
-        <Grid item xs={12}>
-          <Typography variant="h5" gutterBottom>
-            {user?.name}
+        
+        <Grid item xs={12}  className='place-items-center'>
+          <Typography variant="h5" gutterBottom className='grid place-items-center'>
+            <span className=' text-2xl grid place-items-center'>
+            Abdul Hannan
+            </span>
           </Typography>
         </Grid>
+        </div>
         <Grid item xs={12}>
           <TextField
             label="Change Password"
@@ -39,20 +41,22 @@ const ProfilePage = ({ user }) => {
             fullWidth
             value={password}
             onChange={handlePasswordChange}
-            className={classes.input}
+            
           />
         </Grid>
+        
         <Grid item xs={12}>
           <Button
             variant="contained"
             color="primary"
             fullWidth
             onClick={handleChangePassword}
-            className={classes.button}
+            
           >
             Change Password
           </Button>
         </Grid>
+        
       </Grid>
     </Container>
   );
