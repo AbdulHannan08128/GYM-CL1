@@ -1,0 +1,72 @@
+# How To Run This Project.
+
+Step 1: Open This Project/Folder In Your Installed IDE ('VS CODE' recommended)
+
+
+
+Step 2: Also Open 2 Terminals In The Current Project
+           -> If You Are In VS CODE   
+                 - On The Top You Will See A Navigation Pane
+                 - In That Navigation Pane, You Will See An Option 'Terminal'
+                 - Just Click On It And Select 'New Terminal' From The Dropdown Menu
+                 - Automatically, A Terminal Will Be Opened Just At The Bottom Of Your IDE
+                 - Repeat This Process To Open More Terminals
+
+
+
+Step 3: Once You Opened All 2 Terminals, type these commands stepwise in the 2 terminals(one command in one terminal)
+            -> cd server
+            -> cd client
+            
+This will change the working directory in your project to admin, backend, frontend.
+
+
+
+Step 4: In Each Terminal, Type This Command:
+            -> npm i [or] npm install
+            -> if these do not work run this command -> npm i --force
+This Will Install All the required dependencies in the project
+
+
+
+Step 5: Install MongoDB and MongoDB Compass ( If not installed ) by watching a video to 'How To Install MongoDB with MongoDB Compass'
+                              [or]
+Create an account on mongodb atlas and create a database there.
+
+
+
+Step 6: Open MongoDB Compass and Click Connect Button 
+(Note: it will have the default connection string as mongodb://localhost:27017. If You Have An Atlas Account, click on 'connect' button in your atlas dashboard and copy the connection string, replace <password> with you password, paste it in mongoDB compass and click connect button)
+
+
+
+Step:7: Create A Database in MongoDB compass named 'gem' and then create a sample collection named 'test'
+
+
+
+Step 8: Go To Your Project /server and create a '.env' file there:
+          It Will Be Automatically treated as a special file:
+                Write there:  MONGODB_URL=<your_connection_string>
+                        
+                    Note Replace <your_connection_string> with your actual database connection URL that you pasted in MongoDB compass
+
+
+
+
+Step 9: After the installation is complete, run these commands in their suitable directories/projects/folders in terminal:
+            -> In server Project/folder:-> node index.js
+            -> In client Project/folder:: npm start
+            
+
+
+
+Step 10: Type This URL in the browser: 
+           --http://localhost:3000
+      
+
+You Will See Your Website Up And Working.
+
+
+
+
+**NOTE: If This Dosent Work, Try Reinstalling Node.js and then it will work...**
