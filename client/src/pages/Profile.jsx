@@ -1,8 +1,8 @@
 import React from 'react'
 import Profile from '../components/Profile'
-const ProfilePage = () => {
+const ProfilePage = ({currentUser}) => {
   return (
-    <div><Profile/></div>
+    <div><Profile name={currentUser.name} email={currentUser.email} img={currentUser.img}/></div>
   )
 }
 

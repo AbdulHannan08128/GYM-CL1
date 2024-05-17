@@ -35,7 +35,7 @@ function App() {
             <Routes>
               <Route path="/" exact element={<Dashboard />} />
               <Route path="/workouts" exact element={<Workouts />} />
-              <Route path="/profile" exact element={<Profile />} />
+              <Route path="/profile" exact element={<Profile currentUser={currentUser}/>} />
               <Route path="/blogs" exact element={<Blogs />} />
               <Route path="/about" exact element={<About />} />
               <Route path="/contact" exact element={<Contact />} />
